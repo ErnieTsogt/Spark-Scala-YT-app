@@ -23,7 +23,7 @@ class DatabaseConnectionTest extends AnyFunSuite {
       val jdbcUrl = "jdbc:mysql://localhost:3307/ytScanDB"
       val jdbcProps = new Properties()
       jdbcProps.setProperty("user", "root") // Użytkownik
-      jdbcProps.setProperty("password", "zaq12wsx") // Hasło
+      jdbcProps.setProperty("password", "*****") // Hasło
       jdbcProps.setProperty("driver", "com.mysql.cj.jdbc.Driver")
 
       val tableName = "ytvideos"
