@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="MacBook-Pro-Ernie.local" name="DatabaseConnectionTest" tests="1" errors="0" failures="1" skipped="0" time="6.944" timestamp="2024-09-04T12:18:31">
+          <properties>
+      <property name="java.specification.version" value="17"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="sbt.supershell" value="false"/><property name="java.vendor.url" value="https://java.oracle.com/"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/><property name="sun.java.command" value="/Users/mac/Library/Application Support/JetBrains/IntelliJIdea2023.1/plugins/Scala/launcher/sbt-launch.jar early(addPluginSbtFile=&quot;&quot;&quot;/private/var/folders/h0/_ywkplqj51s3jvh6v9z1j_wc0000gn/T/idea.sbt&quot;&quot;&quot;) ; set ideaPort in Global := 56659 ; idea-shell"/><property name="jdk.debug" value="release"/><property name="sun.stderr.encoding" value="UTF-8"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2023-04-18"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="Zero based"/><property name="line.separator" value="
+"/><property name="sun.stdout.encoding" value="UTF-8"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="idea.installation.dir" value="/Applications/IntelliJ IDEA.app/Contents"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="17.0.7+8-LTS-224"/><property name="user.name" value="mac"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/Users/mac/Library/Caches/JNA/temp/jna14450057171116936318.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/var/folders/h0/_ywkplqj51s3jvh6v9z1j_wc0000gn/T/"/><property name="java.version" value="17.0.7"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="native.encoding" value="UTF-8"/><property name="java.library.path" value="/Users/mac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="java.class.path" value="/Users/mac/Library/Application Support/JetBrains/IntelliJIdea2023.1/plugins/Scala/launcher/sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/Warsaw"/><property name="java.vm.specification.version" value="17"/><property name="os.name" value="Mac OS X"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="PL"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/Users/mac"/><property name="user.language" value="pl"/><property name="sbt.ipcsocket.tmpdir" value="/var/folders/h0/_ywkplqj51s3jvh6v9z1j_wc0000gn/T/.sbt63b78cd2/ipcsocket"/><property name="swoval.tmpdir" value="/var/folders/h0/_ywkplqj51s3jvh6v9z1j_wc0000gn/T/.sbt63b78cd2/swoval"/><property name="jline.esc.timeout" value="0"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="path.separator" value=":"/><property name="os.version" value="14.6.1"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="/Users/mac/Desktop/ADI/JavaLaby/Spark-Scala-YT-app"/><property name="os.arch" value="x86_64"/><property name="idea.managed" value="true"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="17.0.7+8-LTS-224"/><property name="java.class.version" value="61.0"/>
+    </properties>
+          <testcase classname="DatabaseConnectionTest" name="Test połączenia z bazą danych MySQL i wczytywania danych" time="6.944">
+                      <failure message="org.scalatest.exceptions.TestFailedException: Nie udało się połączyć z bazą danych lub wczytać danych: Array(&quot;id&quot;, &quot;comments&quot;, &quot;google_vid_id&quot;, &quot;likes&quot;, &quot;scanned_date&quot;, &quot;title&quot;, &quot;views&quot;, &quot;chan_id&quot;) did not contain &quot;columnName&quot; Kolumna columnName nie została znaleziona." type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: Nie udało się połączyć z bazą danych lub wczytać danych: Array(&quot;id&quot;, &quot;comments&quot;, &quot;google_vid_id&quot;, &quot;likes&quot;, &quot;scanned_date&quot;, &quot;title&quot;, &quot;views&quot;, &quot;chan_id&quot;) did not contain &quot;columnName&quot; Kolumna columnName nie została znaleziona.
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:472)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:471)
+	at org.scalatest.funsuite.AnyFunSuite.newAssertionFailedException(AnyFunSuite.scala:1564)
+	at org.scalatest.Assertions.fail(Assertions.scala:933)
+	at org.scalatest.Assertions.fail$(Assertions.scala:929)
+	at org.scalatest.funsuite.AnyFunSuite.fail(AnyFunSuite.scala:1564)
+	at DatabaseConnectionTest.$anonfun$new$2(DatabaseConnectionTest.scala:44)
+	at DatabaseConnectionTest.withSparkSession(DatabaseConnectionTest.scala:14)
+	at DatabaseConnectionTest.$anonfun$new$1(DatabaseConnectionTest.scala:21)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:226)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1564)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:224)
+	at org.scalatest.funsuite.AnyFunSuiteLike.$anonfun$runTest$1(AnyFunSuiteLike.scala:236)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:236)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:218)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1564)
+	at org.scalatest.funsuite.AnyFunSuiteLike.$anonfun$runTests$1(AnyFunSuiteLike.scala:269)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:413)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:269)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:268)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1564)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:1096)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1564)
+	at org.scalatest.funsuite.AnyFunSuiteLike.$anonfun$run$1(AnyFunSuiteLike.scala:273)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:273)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:272)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1564)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:414)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</failure>
+                    </testcase>
+          <system-out><![CDATA[]]></system-out>
+          <system-err><![CDATA[]]></system-err>
+        </testsuite>

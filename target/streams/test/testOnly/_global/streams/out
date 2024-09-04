@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector(--add-exports=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalatest.tools.Framework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(DatabaseConnectionTest, sbt.ForkMain$SubclassFingerscan@5383967b, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDatabaseConnectionTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Test połączenia z bazą danych MySQL i wczytywania danych *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Nie udało się połączyć z bazą danych lub wczytać danych: Array("id", "comments", "google_vid_id", "likes", "scanned_date", "title", "views", "chan_id") did not contain "columnName" Kolumna columnName nie została znaleziona. (DatabaseConnectionTest.scala:44)[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 8 seconds, 10 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	DatabaseConnectionTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
