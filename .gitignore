@@ -3,7 +3,7 @@
 *.iws
 .idea/
 out/
-target
+target/
 project/
 *.class
 .DS_Store
