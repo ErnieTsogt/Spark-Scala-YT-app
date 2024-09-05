@@ -1,9 +1,12 @@
 *.iml
 *.ipr
 *.iws
-.idea
+.idea/
 out/
-target/
+target
 project/
 *.class
 .DS_Store
+*.log
+.env
+.cache/
