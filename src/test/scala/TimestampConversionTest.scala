@@ -1,10 +1,10 @@
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.functions._
 import org.scalatest.funsuite.AnyFunSuite
 
-import java.io.{ByteArrayOutputStream, PrintStream}
 import java.util.Properties
 
-class DatabaseConnectionTest extends AnyFunSuite {
+class TimestampConversionTest extends AnyFunSuite {
 
   def withSparkSession(testCode: SparkSession => Any): Unit = {
     val spark = SparkSession.builder()
@@ -18,7 +18,7 @@ class DatabaseConnectionTest extends AnyFunSuite {
     }
   }
 
-  test("Test połączenia z bazą danych MySQL i wczytywania danych") {
+  test("Konwersja kolumny scanned_date na timestamp i wyświetlenie bez zapisywania") {
     withSparkSession { spark =>
       val jdbcUrl = "jdbc:mysql://localhost:3307/ytScanDB"
       val jdbcProps = new Properties()
@@ -31,20 +31,14 @@ class DatabaseConnectionTest extends AnyFunSuite {
         val df: DataFrame = spark.read
           .jdbc(jdbcUrl, tableName, jdbcProps)
 
-        assert(df.count() > 0, "Tabela jest pusta, połączenie działa, ale nie ma danych.")
+        assert(df.schema.fieldNames.contains("scanned_date"), "Kolumna scanned_date nie została znaleziona.")
 
-        assert(df.schema.fieldNames.contains("likes"), "Kolumna likes nie została znaleziona.")
-
-        val outContent = new ByteArrayOutputStream()
-        Console.withOut(new PrintStream(outContent)) {
-          df.show(numRows = Int.MaxValue, truncate = false)
-        }
-
-        assert(outContent.toString.contains("ZzFObZq3RTc"), "Nie znaleziono oczekiwanej zawartości w wyjściu.")
+        df.select(col("scanned_date"), (from_unixtime(col("scanned_date") / 1000).cast("timestamp")).alias("report_day"))
+          .show(numRows = Int.MaxValue, truncate = false)
 
       } catch {
         case e: Exception =>
-          fail(s"Nie udało się połączyć z bazą danych lub wczytać danych: ${e.getMessage}")
+          fail(s"Nie udało się połączyć z bazą danych lub skonwertować danych: ${e.getMessage}")
       }
     }
   }
