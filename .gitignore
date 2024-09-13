@@ -10,3 +10,4 @@ project/
 *.log
 .env
 .cache/
+.bsp
